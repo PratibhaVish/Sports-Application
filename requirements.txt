@@ -1,0 +1,9 @@
+# requirements.txt
+# ─────────────────
+# Odoo.sh installs these Python packages automatically during deployment.
+# Add any extra Python deps your module needs here.
+# The base Odoo deps (odoo, werkzeug, etc.) are already present on Odoo.sh.
+
+# No extra deps needed for this React-serving module.
+# Example (if you ever add Python-side processing):
+# requests>=2.28.0

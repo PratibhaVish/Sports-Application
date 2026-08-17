@@ -1,0 +1,36 @@
+# ── Node / React ──────────────────────────────────────────────────────────────
+node_modules/
+.env
+.env.local
+.env.*.local
+
+# CRA dev build (only the standalone /build folder — NOT odoo_module/static/build)
+/build
+
+# ── Odoo.sh deployment note ───────────────────────────────────────────────────
+# The compiled React build MUST be committed to Git for Odoo.sh because
+# Odoo.sh does NOT run `npm install` or `npm run build` during deployment.
+#
+# Commit odoo_module/static/build/ explicitly:
+#   npm run build:odoo
+#   git add odoo_module/static/build
+#   git commit -m "chore: update React build"
+#   git push
+#
+# DO NOT add odoo_module/static/build/ to .gitignore.
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.Python
+*.egg-info/
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Editor ────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp

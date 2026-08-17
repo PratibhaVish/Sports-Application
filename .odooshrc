@@ -1,0 +1,10 @@
+# .odooshrc
+# ──────────
+# Odoo.sh reads this file during branch builds.
+# Place it in the ROOT of your Git repository.
+#
+# Reference: https://www.odoo.sh/documentation/master/administration/odoo_sh/advanced/submodules.html
+
+# Tell Odoo.sh which folder contains the Odoo addons (modules).
+# Our custom module lives at ./odoo_module  relative to the repo root.
+ODOO_ADDONS_PATH="odoo_module"

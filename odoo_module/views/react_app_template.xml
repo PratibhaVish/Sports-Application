@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        react_app_template.xml
+        ──────────────────────
+        Adds a top-level menu entry in the Odoo backend so users can open the
+        React app directly from the App Switcher.
+        The URL action simply redirects to /deploy-test served by our controller.
+    -->
+
+    <!-- URL Action — opens the React SPA in the same tab -->
+    <record id="action_open_deploy_test" model="ir.actions.act_url">
+        <field name="name">Deploy Test App</field>
+        <field name="url">/deploy-test</field>
+        <field name="target">self</field>
+    </record>
+
+    <!-- Top-level menu item (visible in App Switcher) -->
+    <menuitem
+        id="menu_deploy_test_root"
+        name="Deploy Test"
+        action="action_open_deploy_test"
+        web_icon="deploy_test_react,static/img/icon.png"
+        sequence="100"
+    />
+</odoo>
